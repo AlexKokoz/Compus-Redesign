@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- HEADER -->
+        <header>
+            <div class="row expanded align-middle primary-nav">
+                <a href="#" class="header-item logo">
+                    <img alt="Compus" src="assets\transparent-logo.png">
+                </a>
+                <div class="header-item menu">
+                    <input type="checkbox" id="toggleMenu">
+                    <label class="menu-icon" for="toggleMenu">
+                        <i class="fa fa-bars"></i>
+                    </label>
+                    <nav role="navigation">
+                        <ul>
+                            <li>
+                                <a href="#">ΤΜΗΜΑΤΑ</a>
+                            </li>
+                            <li>
+                                <a href="#">ΜΑΘΗΜΑΤΑ</a>
+                            </li>
+                            <li>
+                                <a href="#">STUDENTS WEB</a>
+                            </li>
+                            <li>
+                                <a href="#">UOM</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQ</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header-item actions">
+                    <div class="languages">
+                        <span class="language-item gre">gre</span>
+                        <span class="language-item eng">eng</span>
+                    </div>
+                    <div class="user-menu">
+                        <div class="user-icon">
+                            <i class="fa fa-user"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- END HEADER -->
+
+        <!-- MAIN CONTENT -->
+        <main id="content" role="main">
+            <section id="ui-session">
+                <div class="ui-session-header">
+                    <div class="expanded row align-center">
+                        <div class="session-toggle-btn">
+                            <input type="radio" id="toggleLogin" name="session-toggle-btn" checked>
+                            <input type="radio" id="toggleSignup" name="session-toggle-btn">
+                            <label for="toggleLogin">Log in</label>
+                            <label for="toggleSignup">Sign up</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-session-body">
+                    <div class="expanded row align-center">
+                        <div class="sessions">
+                            <div class="session login-session">
+                                <form>
+                                    <fieldset>
+                                        <div class="field-item">
+                                            <input type="text" autofocus>
+                                            <label>Username</label>
+                                        </div>
+                                        <div class="field-item">
+                                            <input type="password">
+                                            <label>Password</label>
+                                        </div>
+                                    </fieldset>
+                                    <div class="form-actions">
+                                        <input type="submit" value="Log in">
+                                    </div>
+                                </form>
+                                <div class="other-links">
+                                    <a class="forgot-pw" href="#">Forgot Password?</a>
+                                </div>
+                            </div>
+                            <div class="session signup-session" style="display: none">
+                                <div class="form-categories">
+                                    <span class="form-category active" id="toggleStudent">Student</span>
+                                    <span class="form-category" id="toggleProfessor">Professor</span>
+                                    <span class="form-category" id="toggleVisitor">Visitor</span>
+                                </div>
+                                <div class="forms">
+                                    <form id="studentForm" class="active">
+                                        <fieldset>
+                                            <div class="field-item">
+                                                <input type="text" autofocus>
+                                                <label>Username</label>
+                                            </div>
+                                            <div class="field-item">
+                                                <input type="text">
+                                                <label>UID</label>
+                                            </div>
+                                            <div class="field-item">
+                                                <input type="password">
+                                                <label>Password</label>
+                                            </div>
+                                        </fieldset>
+                                        <div class="form-actions">
+                                            <input type="submit" value="Sign Up">
+                                        </div>
+                                    </form>
+                                    <form id="professorForm">
+                                        <fieldset>
+                                            <div class="field-item">
+                                                <input type="text">
+                                                <label>Username</label>
+                                            </div>
+                                            <div class="field-item">
+                                                <input type="password">
+                                                <label>Password</label>
+                                            </div>
+
+                                        </fieldset>
+                                        <div class="form-actions">
+                                            <input type="submit" value="Sign Up">
+                                        </div>
+                                    </form>
+                                    <form id="visitorForm">
+                                        <fieldset>
+                                            <div class="field-item">
+                                                <input type="text">
+                                                <label>First name</label>
+                                            </div>
+                                            <div class="field-item">
+                                                <input type="text">
+                                                <label>Last name</label>
+                                            </div>
+                                            <div class="field-item">
+                                                <input type="text">
+                                                <label>Username</label>
+                                            </div>
+                                            <div class="field-item">
+                                                <input type="email">
+                                                <label>Email</label>
+                                            </div>
+
+                                        </fieldset>
+                                        <div class="form-actions">
+                                            <input type="submit" value="Sign Up">
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="announcements">
+
+                <div class="unexpanded row align-center">
+                    <h2>ΑΝΑΚΟΙΝΩΣΕΙΣ</h2>
+                </div>
+                <div class="unexpanded row align-center">
+                    <div class="row">
+                        <div class="column small-12 medium-6 large-6 announcement">
+                            <div class="inner">
+                                <h3 class="title">ΑΝΑΚΟΙΝΩΣΗ ΓΙΑ ΝΕΟΕΙΣΑΧΘΕΝΤΕΣ ΠΡΟΠΤΥΧΙΑΚΟΥΣ ΚΑΙ ΜΕΤΑΠΤΥΧΙΑΚΟΥΣ ΦΟΙΤΗΤΕΣ</h3>
+                                <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fringilla nunc sed velit
+                                    lobortis semper. Donec eget erat eu tellus maximus iaculis. Suspendisse mi nisi, tempus
+                                    non dapibus ut, dignissim vel felis. Nunc id laoreet lacus. Nunc sed vehicula leo. Orci
+                                    varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum
+                                    erat felis, finibus pharetra malesuada quis, malesuada sed lectus. Pellentesque gravida
+                                    metus at elementum lobortis. Pellentesque vulputate quis libero at auctor. Mauris id
+                                    justo massa.</div>
+                            </div>
+                        </div>
+                        <div class="column small-12 medium-6 large-6 announcement">
+                            <div class="inner">
+                                <h3 class="title">ΕΠΙΚΟΙΝΩΝΙΑ ΜΕΣΩ ΛΟΓΑΡΙΑΣΜΟΥ ΣΤΟ uom.edu.gr</h3>
+                                <div class="body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fringilla nunc sed velit
+                                    lobortis semper. Donec eget erat eu tellus maximus iaculis. Suspendisse mi nisi, tempus
+                                    non dapibus ut, dignissim vel felis. Nunc id laoreet lacus. Nunc sed vehicula leo. Orci
+                                    varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum
+                                    erat felis, finibus pharetra malesuada quis, malesuada sed lectus. Pellentesque gravida
+                                    metus at elementum lobortis. Pellentesque vulputate quis libero at auctor. Mauris id
+                                    justo massa.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- END MAIN CONTENT -->
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="expanded row footer-wrapper">
+                <div class="expanded row copyright">
+                    <div class="unexpanded row align-center">
+                        <nav role="navigation">
+                            <span>CoMPUs © 2004-2008</span>
+                            <a href="#">
+                                <span>Υποστηριξη</span>
+                            </a>
+                            <a href="#">
+                                <span>Διαχειριση</span>
+                            </a>
+                            <a href="#">
+                                <span>Copyright</span>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+                <div class="expanded row logos">
+                    <div class="unexpanded row align-center">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img alt="Compus" src="assets\transparent-logo.png">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END FOOTER -->
+    </div>
+
+
+    <!-- ~~~~ JQUERY CDN ~~~~ -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <!-- BASIC PAGE SCRIPT -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+.ui-session-header {
+    background: darken(#fff, 3%);
+    padding-top: 4rem;
+    border-bottom: 1px solid darken(#fff, 5%);
+}
+
+.ui-session-body {
+    padding-top: 4rem;
+}
+
+@import 'ui-session-header.scss';
+@import 'ui-session-body.scss';

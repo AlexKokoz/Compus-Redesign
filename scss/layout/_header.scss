@@ -1,0 +1,204 @@
+$header-height: 62px;
+$dodgerblue: dodgerblue;
+$trout: #495057;
+
+header {
+    position: relative;
+    z-index: 1990;
+    background: #fff;
+
+    .primary-nav {
+        height: $header-height;
+        border-bottom: 1px solid rgb(242, 242, 242);
+    }
+
+    .header-item {
+        height: auto;
+        width: auto;
+        background: transparent;
+        position: relative;
+
+        + .header-item {
+          padding-left: 25px;  
+        }
+    }
+
+    .logo {
+        position: relative;
+        height: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+
+        img {
+            width: 140px;
+            height: 50px;
+        }
+    }
+
+    
+
+    .menu {
+        position: relative;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+
+        input[id="toggleMenu"] {
+            display: none;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            color: $trout;
+        }
+
+        nav {
+
+            ul {
+                list-style: none;
+                display: -webkit-box;
+                display: -moz-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+    
+                li {               
+                    a{
+                        display: block; 
+                        padding: 20px 18px;
+                        line-height: 20px;
+                        height: $header-height;
+                        text-align: center;
+                        font-size: 0.7em;
+                        letter-spacing: 1.5px;
+                        color: $trout;
+                        text-transform: uppercase;
+                        border-bottom: 1px solid transparent;
+    
+                        &:hover {
+                            border-bottom: 1px solid $dodgerblue;
+                            color: lighten($trout, 30%);
+                            transition: all 0.45s ease;
+                        }
+                    }
+                }
+            }
+        }        
+    }
+
+    .actions {
+        margin-left: auto;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+
+        > * {
+           padding-left: 15px; 
+        }
+
+        .languages {
+            .language-item {
+                display: block;
+                height: $header-height;
+                padding: 20px 25px;
+                font-size: 0.8em;
+                letter-spacing: 1.5px;
+                cursor: pointer;
+                color: $dodgerblue;
+
+                &:hover {
+                    color: lighten($trout, 30%);
+                }
+
+                &.gre {
+                    display: none;
+                }
+            }
+        }
+
+        .user-menu {
+            position: relative;
+            padding-top: 20px;
+            display: none;
+
+            .user-icon {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    header {
+
+        .header-item + .header-item {
+            padding-left: 0px;
+        }
+        .logo {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .menu {
+            .menu-icon {
+                display: block;
+            }
+            
+            nav {
+                display: none;
+                border-bottom: 1px solid $dodgerblue;
+            }
+
+            input#toggleMenu:checked ~ nav {
+                display: block;
+                position: fixed;
+                top: $header-height;
+                left:0px;
+                width: 100vw;
+                background: #fff;
+                
+
+                ul {
+                    flex-direction: column;
+
+                    a {
+                        &:hover {
+                            border-bottom: 1px solid transparent;
+                        }                       
+                    }
+
+                    a + a {
+                        border-top: 1px solid #000;
+                    }
+                }
+                
+            }
+        }
+
+        .actions {
+            .languages {
+                .language-item {
+                    padding: 20px 0;
+                }
+            }
+        }
+    }
+}

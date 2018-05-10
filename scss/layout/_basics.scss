@@ -1,0 +1,96 @@
+@import '../helpers/variables.scss';
+
+.row {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding-left: $content-padding;
+    padding-right: $content-padding;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    
+    &.expanded {
+        max-width: 100%;
+    }
+
+    &.unexpanded {
+        max-width: $max-width !important;
+        margin: 0 auto !important;
+    }
+
+    &.align-middle {
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+    }
+
+    &.align-center {
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .row {
+        margin-left: -$content-padding;
+        margin-right: -$content-padding;
+    }
+
+
+}
+
+.column {
+    padding-left: $content-padding;
+    padding-right: $content-padding;
+    -webkit-flex: 1 0 0px;
+    flex: 1 0 0px;
+}
+
+
+.small-12 {
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%; 
+}
+
+@media all and (min-width: 90rem) {
+    .large-6 {
+        -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media all and (min-width: 58rem) {
+    .medium-6 {
+        -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media all and (min-width: 90rem) {
+    .large-4 {
+        -webkit-flex: 0 0 33.3333%;
+        -ms-flex: 0 0 33.3333%;
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+}
+
+@media all and (min-width: 58rem) {
+    .medium-4 {
+        -webkit-flex: 0 0 33.3333%;
+        -ms-flex: 0 0 33.3333%;
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+}

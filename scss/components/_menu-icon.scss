@@ -1,0 +1,47 @@
+@mixin menu($width, $bar-height, $color, $height: 7 * $bar-height) {
+    width: $width;
+    height: $height;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+    
+    &:before, &:after, .middle {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: $width;
+      height: $bar-height;
+      background: $color;
+      transition: all 0.15s ease-in-out;
+    }
+  
+    &:before { top: 0; }
+    &:after { bottom: 0; }
+    .middle {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  
+    &.open {
+      transform: rotate(90deg);
+  
+      .middle {
+        transform: scaleX(0);
+      }
+      &:before {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+      }
+      &:after {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+      }
+    }
+  
+    &:not(.open) {
+      &:after { width: 0.6 * $width; }
+      .middle { width: 0.8 * $width; }
+      &:hover .middle { width: $width; }
+      &:hover:after { width: $width; }
+    }
+  }
